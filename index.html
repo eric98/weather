@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Eric weather</title>
+</head>
+<body>
+<div class="dades-ciutat">
+  <h1>New York, NY</h1>
+  <span class="gris">Tuesday, April 15th</span>
+  <span class="gris">Overcast</span>
+</div>
+<div class="temps-actual">
+  <div class="graus-icon">
+    <img src="img/cloudy.png" alt="Overcast">
+    <span class="graus-actuals">58<span class="tipus-graus-actuals">ºF</span></span>
+  </div>
+  <div class="caracteristiques">
+    <span class="gris">Precipitation: <span class="fosc">100%</span></span>
+    <span class="gris">Humidity: <span class="fosc">97%</span></span>
+    <span class="gris">Wind: <span class="fosc">4 mph SW</span></span>
+    <span class="gris">Pollen Count: <span class="fosc">36</span></span>
+  </div>
+</div>
+<div class="temps-setmana">
+  <div class="dies-setmana">
+    <span class="dia-setmana"><b>Today</b></span>
+    <img class="imatge-setmana" src="img/thunderstorms.png" alt="Thunderstorms">
+    <div class="graus-setmana">
+      <span class="maxim">68º</span>
+      <span class="minim">36º</span>
+    </div>
+    <div class="pollen-setmana">
+      <span class="nom-pollen">Pollen</span>
+      <span class="quantitat-pollen">36</span>
+    </div>
+  </div>
+  <div class="dies-setmana">
+    <span class="dia-setmana"><b>Wednesday</b></span>
+    <img class="imatge-setmana" src="img/sunny.png" alt="Sunny">
+    <div class="graus-setmana">
+      <span class="maxim">50º</span>
+      <span class="minim">39º</span>
+    </div>
+    <div class="pollen-setmana">
+      <span class="nom-pollen">Pollen</span>
+      <span class="quantitat-pollen">36</span>
+    </div>
+  </div>
+  <div class="dies-setmana">
+    <span class="dia-setmana"><b>Thursday</b></span>
+    <img class="imatge-setmana" src="img/sunny.png" alt="Sunny">
+    <div class="graus-setmana">
+      <span class="maxim">55º</span>
+      <span class="minim">39º</span>
+    </div>
+    <div class="pollen-setmana">
+      <span class="nom-pollen">Pollen</span>
+      <span class="quantitat-pollen">36</span>
+    </div>
+  </div>
+  <div class="dies-setmana">
+    <span class="dia-setmana"><b>Friday</b></span>
+    <img class="imatge-setmana" src="img/partly_cloudy.png" alt="Partly Cloudy">
+    <div class="graus-setmana">
+      <span class="maxim">54º</span>
+      <span class="minim">43º</span>
+    </div>
+    <div class="pollen-setmana">
+      <span class="nom-pollen">Pollen</span>
+      <span class="quantitat-pollen">36</span>
+    </div>
+  </div>
+  <div class="dies-setmana">
+    <span class="dia-setmana"><b>Saturday</b></span>
+    <img class="imatge-setmana" src="img/rain_s_cloudy.png" alt="Rain and cloudy">
+    <div class="graus-setmana">
+      <span class="maxim">64º</span>
+      <span class="minim">46º</span>
+    </div>
+    <div class="pollen-setmana">
+      <span class="nom-pollen">Pollen</span>
+      <span class="quantitat-pollen">36</span>
+    </div>
+  </div>
+  <div class="dies-setmana">
+    <span class="dia-setmana"><b>Sunday</b></span>
+    <img class="imatge-setmana" src="img/rain_s_cloudy.png" alt="Rain and cloudy">
+    <div class="graus-setmana">
+      <span class="maxim">64º</span>
+      <span class="minim">50º</span>
+    </div>
+    <div class="pollen-setmana">
+      <span class="nom-pollen">Pollen</span>
+      <span class="quantitat-pollen">36</span>
+    </div>
+  </div>
+  <div class="dies-setmana">
+    <span class="dia-setmana"><b>Monday</b></span>
+    <img class="imatge-setmana" src="img/partly_cloudy.png" alt="Partly Cloudy">
+    <div class="graus-setmana">
+      <span class="maxim">61º</span>
+      <span class="minim">50º</span>
+    </div>
+    <div class="pollen-setmana">
+      <span class="nom-pollen">Pollen</span>
+      <span class="quantitat-pollen">36</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<style>
+
+  @media (max-width:600px) {
+    @media (max-width:400px) {
+      body {
+        font-size: 10px;
+        min-width: 300px;
+      }
+    }
+
+    .dies-setmana {
+      border-top: 1px solid grey;
+      display: flex;
+      text-align: center;
+    }
+
+    .dies-setmana:last-of-type {
+      border-bottom: 1px solid grey;
+    }
+
+    .dies-setmana > * {
+      margin: auto;
+    }
+
+    .graus-setmana, .pollen-setmana {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width:600px) {
+    body {
+      max-width: 800px;
+    }
+
+    .temps-setmana {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .dies-setmana {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .temps-setmana {
+    padding-top: 2em;
+  }
+
+  .temps-actual {
+    display: flex;
+  }
+
+  .graus-icon {
+    width: 50%;
+  }
+
+  .caracteristiques {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .graus-actuals {
+    font-size: 50px;
+    vertical-align: super;
+  }
+
+  .tipus-graus-actuals {
+    font-size: 10px;
+    vertical-align: super;
+  }
+
+  .dades-ciutat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gris, .minim, .nom-pollen, .tipus-graus-actuals {
+    color: grey;
+  }
+  .fosc, .maxim, .quantitat-pollen {
+    color: black;
+  }
+
+  body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  }
+</style>
